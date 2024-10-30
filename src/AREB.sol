@@ -34,8 +34,10 @@ contract AREB is ERC20 {
         uint256 initialSupply,
         address _honey,
         address _HenloRouter,
-        address _honeyManager
-    ) ERC20("Arebmeme5", "AREB5") {
+        address _honeyManager,
+        string memory name,
+        string memory symbol
+    ) ERC20(name, symbol) {
         _mint(msg.sender, initialSupply);
         Honey = IERC20(_honey);
         HenloDexRouter = IHenloDexRouterV1(_HenloRouter);

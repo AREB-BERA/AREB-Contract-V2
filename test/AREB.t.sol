@@ -63,7 +63,14 @@ contract AREBTest is Test {
 
         // Deploy AREB token
         try
-            new AREB(INITIAL_SUPPLY, HONEY, HENLO_ROUTER, address(honeyManager))
+            new AREB(
+                INITIAL_SUPPLY,
+                HONEY,
+                HENLO_ROUTER,
+                address(honeyManager),
+                "AREB",
+                "AREB"
+            )
         returns (AREB _areb) {
             areb = _areb;
             console2.log("AREB deployed at:", address(areb));
